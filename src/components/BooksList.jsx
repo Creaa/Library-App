@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./BooksList.css";
 import PropTypes from "prop-types";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BooksList = ({ list }) => {
+  AOS.init();
   return (
     <ul className="books-list">
       {list.map(el => {
@@ -13,7 +16,15 @@ const BooksList = ({ list }) => {
           shortDescription = shortDescription.slice(0, 1).join(".");
         }
         return (
-          <li className="book-element" key={el.id}>
+          <li
+            data-aos="fade-in"
+            data-aos-offset="0"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+            data-aos-once="true"
+            className="book-element"
+            key={el.id}
+          >
             <img
               className="book-thumbnail"
               src={

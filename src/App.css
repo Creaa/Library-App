@@ -54,6 +54,18 @@ body {
 	border: none;
 }
 
+.no-result {
+	font-size: 1.5rem;
+	color: #5e5e5e;
+	text-align: center;
+	margin-top: 23vh;
+}
+
+.loading {
+	width: 100px;
+	margin-left: 45%;
+	margin-top: 3%;
+}
 
 @media screen and (max-width: 992px) {
 	.input {
@@ -64,5 +76,9 @@ body {
 	.site-header {
 		width: 100vw;
 		height: 50vh;
+	}
+
+	.loading {
+		margin-left: 35%;
 	}
 }
